@@ -16,10 +16,10 @@ public class MyFilter3 implements Filter {
         // 요청할 때 마다 header에 Authrization에 value값으로 토큰을 가지고 옴
         // 토큰이 넘어오면 내가 만든 토큰이 맞는지 검증(RSA, HS256)
         if(req.getMethod().equals("POST")){
-            System.out.println("POST 요청");
+            //System.out.println("POST 요청");
             String headerAuth = req.getHeader("Authorization");
-            System.out.println("headerAuth : " + headerAuth);
-            System.out.println("필터3");
+            //System.out.println("headerAuth : " + headerAuth);
+            //System.out.println("필터3");
             if(headerAuth.equals("shin")){
                 chain.doFilter(req, res);
             } else {
